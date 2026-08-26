@@ -15,7 +15,9 @@ Built as a full-stack system: upload an audio file, and within minutes get a cle
 
 ## Demo
 
-*(add a short screen-recording GIF here showing an upload → processing → results flow)*
+![Homepage](screenshots/homepage.png)
+![Processing](screenshots/processing.png)
+![Results](screenshots/results.png)
 
 ## Tech stack
 
