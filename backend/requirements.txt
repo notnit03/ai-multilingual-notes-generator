@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+celery
+redis
+openai-whisper
+google-generativeai
+supabase
+pydantic
+python-dotenv

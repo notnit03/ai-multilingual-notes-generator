@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+html {
+  color-scheme: light;
+}
+
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+.wave-bar {
+  animation: waveform 1s ease-in-out infinite;
+}
+
+@theme inline {
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-geist-mono);
+}
