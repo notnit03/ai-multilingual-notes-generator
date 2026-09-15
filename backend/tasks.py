@@ -9,6 +9,7 @@ load_dotenv()
 
 celery = Celery("tasks", broker=os.environ.get("REDIS_URL", "redis://localhost:6379"))
 groq_client = Groq(api_key=os.environ["GROQ_API_KEY"])
+GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b")
 
 CHUNK_SECONDS = 12
 
@@ -81,7 +82,7 @@ def process_meeting(meeting_id: str, audio_path: str):
         )
 
         response = groq_client.chat.completions.create(
-            model="openai/gpt-oss-20b",
+            model=GROQ_MODEL,
             messages=[{
                 "role": "user",
                 "content": f"""You are an expert meeting analyst. This transcript has already been translated to English from a multilingual meeting; each line shows its original source language in parentheses. Given this transcript, return ONLY a valid JSON object with:

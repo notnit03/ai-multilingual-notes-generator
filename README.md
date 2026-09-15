@@ -25,7 +25,7 @@ Built as a full-stack system: upload an audio file, and within minutes get a cle
 **Backend:** FastAPI (Python)
 **Background processing:** Celery + Redis (so transcription doesn't block the HTTP request)
 **Speech-to-text & translation:** OpenAI Whisper (`small` model, run locally)
-**Notes generation:** Llama 3 via Groq API
+**Notes generation:** gpt-oss-20b via Groq API
 **Database:** PostgreSQL via Supabase
 
 ## Architecture
