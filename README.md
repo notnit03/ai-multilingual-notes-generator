@@ -6,7 +6,7 @@ Built as a full-stack system: upload an audio file, and within minutes get a cle
 
 ## What it does
 
-- **Transcribes audio** in any of Whisper's ~99 supported languages
+- **Transcribes audio** in any of Whisper's ~99 supported languages (tested across 15)
 - **Translates automatically** to English, even when a recording switches between multiple languages mid-conversation
 - **Generates structured notes** — summary, action items (with owner/deadline when mentioned), and decisions — using an LLM
 - **Flags uncertain transcription** — low-confidence or unclear audio segments are marked for manual review instead of being silently guessed at
@@ -119,6 +119,8 @@ CREATE TABLE notes (
   generated_at TIMESTAMPTZ DEFAULT now()
 );
 
+-- RLS is disabled for local development only. A deployed version would
+-- keep it on with policies scoped to the owning user.
 ALTER TABLE meetings DISABLE ROW LEVEL SECURITY;
 ALTER TABLE segments DISABLE ROW LEVEL SECURITY;
 ALTER TABLE notes DISABLE ROW LEVEL SECURITY;
