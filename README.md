@@ -6,7 +6,7 @@ Built as a full-stack system: upload an audio file, and within minutes get a cle
 
 ## What it does
 
-- **Transcribes audio** in any of Whisper's ~99 supported languages (tested across 15)
+- **Transcribes audio** in any of Whisper's ~99 supported languages (tested across 80+)
 - **Translates automatically** to English, even when a recording switches between multiple languages mid-conversation
 - **Generates structured notes** — summary, action items (with owner/deadline when mentioned), and decisions — using an LLM
 - **Flags uncertain transcription** — low-confidence or unclear audio segments are marked for manual review instead of being silently guessed at
